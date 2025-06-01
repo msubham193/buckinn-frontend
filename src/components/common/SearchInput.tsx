@@ -1,16 +1,18 @@
-import React from 'react';
-import { Search } from 'lucide-react';
+import React from "react";
+import { Search } from "lucide-react";
 
 interface SearchInputProps {
   placeholder?: string;
   value: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  disabled?: boolean;
 }
 
 const SearchInput: React.FC<SearchInputProps> = ({
-  placeholder = 'Search...',
+  placeholder = "Search...",
   value,
   onChange,
+  disabled,
 }) => {
   return (
     <div className="relative">
@@ -23,6 +25,7 @@ const SearchInput: React.FC<SearchInputProps> = ({
         placeholder={placeholder}
         value={value}
         onChange={onChange}
+        disabled={disabled}
       />
     </div>
   );

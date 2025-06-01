@@ -6,7 +6,7 @@ const SettingsPage: React.FC = () => {
   const { user } = useAuth();
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 mt-16">
       <div>
         <h1 className="text-2xl font-bold text-gray-800">Settings</h1>
         <p className="text-gray-500">Manage your account settings and preferences</p>

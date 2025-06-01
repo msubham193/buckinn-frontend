@@ -5,7 +5,7 @@ import { mockEbooks, mockAuthors, mockCategories } from '../services/mockData';
 
 const DashboardPage: React.FC = () => {
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 mt-16">
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
           <h1 className="text-2xl font-bold text-gray-800">Dashboard</h1>
@@ -82,7 +82,7 @@ const DashboardPage: React.FC = () => {
           <h2 className="text-lg font-semibold text-gray-800 mb-4">Recent Authors</h2>
           <div className="space-y-4">
             {mockAuthors.map((author) => (
-              <div key={author.id} className="flex items-center border-b border-gray-100 pb-4">
+              <div key={author.name} className="flex items-center border-b border-gray-100 pb-4">
                 <div className="h-10 w-10 rounded-full bg-primary-100 text-primary-800 flex items-center justify-center font-bold text-sm">
                   {author.name.split(' ').map(name => name[0]).join('').toUpperCase().substring(0, 2)}
                 </div>

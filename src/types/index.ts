@@ -6,14 +6,16 @@ export interface User {
 }
 
 export interface Author {
-  id: string;
+  _id: string;
   name: string;
   bio: string;
   createdAt: string;
+
+  profileImage?: string | File;
 }
 
 export interface Category {
-  id: string;
+  _id: string;
   name: string;
   description: string;
   createdAt: string;
@@ -48,6 +50,7 @@ export interface Ebook {
   publishedAt?: string;
   createdAt: string;
   updatedAt: string;
+  fileUrl: string;
 }
 
 export interface AuthState {

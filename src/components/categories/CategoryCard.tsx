@@ -15,13 +15,13 @@ const CategoryCard: React.FC<CategoryCardProps> = ({ category, onEdit, onDelete 
         <h3 className="text-lg font-semibold text-gray-800">{category.name}</h3>
         <div className="flex space-x-2">
           <button 
-            onClick={() => onEdit(category.id)}
+            onClick={() => onEdit(category._id)}
             className="p-1.5 text-gray-500 hover:text-primary-600 hover:bg-primary-50 rounded-full transition-colors"
           >
             <Edit size={18} />
           </button>
           <button 
-            onClick={() => onDelete(category.id)}
+            onClick={() => onDelete(category._id)}
             className="p-1.5 text-gray-500 hover:text-red-600 hover:bg-red-50 rounded-full transition-colors"
           >
             <Trash2 size={18} />
